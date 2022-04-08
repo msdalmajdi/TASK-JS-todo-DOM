@@ -11,49 +11,77 @@
     
 </head>
 
-<body>
+<body class="p-3 mb-2 bg-light text-dark">
 
-    <div>
-    <div>
-        <h1>Country</h1>
-        <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
-        <select id="categories-list" title="All">
-            
-        </select>
-
-        <input type="text" name="new-task" id="new-task" placeholder="* Add a new task">
-        <input type="button" name="add-task" value="Add" onclick="addTask()">
-    </div>
-
-    <div >
-        <h1>Contienent</h1>
-        <input type="text" name="new-category" id="new-category" placeholder="* Add a new category">
-        <input type="button" name="add-category" value="Add" onclick="addCategory()">
-        
-    </div>
+    
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-md-12 m-2">
+                    <div>
+                        <h1>Country</h1>
+                        <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
+                        <select id="categories-list" title="All" class="form-select form-select-sm p-2">
+                            
+                        </select>
+                
+                        <input type="text" class="border border-light rounded-pill p-2" name="new-task" id="new-task" placeholder="* Add a new task">
+                        <input type="button" class="btn btn-info m-2" name="add-task" value="Add" onclick="addTask()">
+                    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+                    <div >
+                        <h1>Contienent</h1>
+                        <input type="text" class="border border-light rounded-pill p-2" name="new-category" id="new-category" placeholder="* Add a new category">
+                        <input type="button" class="btn btn-info m-2"name="add-category" value="Add" onclick="addCategory()">
+                        
+                    </div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-12 m-2">
+                <!-- FILTERING DIV -->
+                    
+                <div>
+                    <h1>Filter by Continent</h1>
+                    <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
+                    <select id="categories-list-filter" title="All" class="form-select form-select-sm m-2">
+                    </select>
+                    
+                    <input type="button" class="btn btn-info m-2" name="filter-category" value="Filter" onclick="filterTasks()">
+                    <!-- DONE for filtering thing -->
+                    <div>
+                        <input type="checkbox" name="done" id="done"class="form-check-input m-2">
+                        <label for="done">Filter by Memorize</label>
+                    </div>
+                </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+                    <!-- KEEP THE DIV EMPTY. IT WILL BE FILLED BY JS  -->
+                    <div  id="tasks-list"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-    <!-- FILTERING DIV -->
     
-    <div>
-        <h1>Filter by Continent</h1>
-        <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
-        <select id="categories-list-filter" title="All">
-        </select>
-        
-        <input type="button" name="filter-category" value="Filter" onclick="filterTasks()">
-        <!-- DONE for filtering thing -->
-        <div>
-            <input type="checkbox" name="done" id="done">
-            <label for="done">Filter by Memorize</label>
-        </div>
-    </div>
+
+    
 
 
     
 
-    <!-- KEEP THE DIV EMPTY. IT WILL BE FILLED BY JS  -->
-    <div  id="tasks-list"></div>
+
+    
+
+    
 
 
 </body>

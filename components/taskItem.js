@@ -4,16 +4,16 @@ function tasksItemComponent(task) {
   // For any variables, just use the interpolation operation ${} and pass the variable
   const checked = task.done ? "checked" : "";
   return `
-              <div class="todo-item">
+              <div class="todo-item bg-primary m-2 p-1 text-dark bg-opacity-10 rounded">
                 <input 
-                  class="task-checkbox" 
+                class="form-check-input my-2 mx-2" 
                   type="checkbox"
                   ${checked} 
                   onchange="taskChecked(${task.id}, this.checked)"
                 />
-                <div className="movie-details">
-                  <p class="item-category">${task.category}</p>
-                  <p class="item-title">${task.title}</p>
+                <div class="my-2">
+                  <h6>${task.category}</h6>
+                  <p>${task.title}</p>
                 </div>
                 
               </div>
